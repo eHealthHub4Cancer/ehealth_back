@@ -6,6 +6,14 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # Consume our database flag before Django parses command options.
+    if '--test' in sys.argv:
+        os.environ['EHEALTH_TEST_MODE'] = '1'
+    elif os.environ.get('RUN_MAIN') != 'true':
+        # The reload child inherits this choice after --test has been consumed.
+        # A fresh command without --test must still default to PostgreSQL.
+        os.environ['EHEALTH_TEST_MODE'] = '0'
+    sys.argv = [argument for argument in sys.argv if argument != '--test']
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ehealth_hub.settings')
     try:
         from django.core.management import execute_from_command_line
