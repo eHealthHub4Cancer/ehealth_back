@@ -1,0 +1,763 @@
+[
+  {
+    "name": "Dr Shirin Moghaddam",
+    "title": "Mathematics and Statistics, Faculty Of Science & Engineering, University of Limerick",
+    "image": "ShirinMoghaddam.jpeg",
+    "tags": [
+      "Project Supervisor",
+      "Limerick"
+    ],
+    "route": "/people/shirin",
+    "slug": "shirin-001",
+    "profile": {
+      "name": "Dr. Shirin Moghaddam",
+      "image": "ShirinMoghaddam.jpeg",
+      "institution": {
+        "title": "Lecturer in Statistics & Data Science",
+        "location": "Mathematics and Statistics, Faculty Of Science & Engineering, University of Limerick"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Limerick",
+        "UL"
+      ],
+      "homepage_url": "https://www.ul.ie/research/dr-shirin-moghaddam",
+      "email": "shirin.moghaddam@ul.ie",
+      "bio": [
+        "Dr Shirin Moghaddam is a Lecturer in Statistics & Data Science in the Department of Mathematics and Statistics in the University of Limerick. Shirin holds a BSc in Statistics and an MSc in Mathematical Statistics from the University of Tehran. She completed her PhD in Statistics at the University of Galway (NUIG) on developing Bayesian imputation approaches in survival analysis.",
+        "Following her PhD, she worked as a postdoctoral research fellow in the Conway Institute at University College Dublin on an interdisciplinary project on developing prediction models for prostate cancer progression. She was a lecturer at University College Cork before taking up her current position at the University of Limerick.",
+        "Her primary research interests are Survival analysis, Bayesian modelling and Machine learning approaches, in particular, their applications in cancer research. She collaborates nationally and internationally on modelling time-to-event data and developing prediction models in medical research. She is the chair of the Young Statisticians' Section of the Irish Statistical Association and also a member of Cancer Trials Ireland."
+      ],
+      "research_interests": [
+        "Survival Analysis",
+        "Bayesian Statistics",
+        "Statistical Modelling",
+        "Machine Learning",
+        "Clinical Decision Making",
+        "Translational Statistics",
+        "Cancer Research"
+      ],
+      "social_links": [
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=lr2xJDEAAAAJ&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dr Katie Crowley",
+    "title": "Associate Professor Computer Science & Health Informatics, Funded Investigator, Lero, University of Limerick",
+    "image": "KatieCrowley.png",
+    "tags": [
+      "Project Supervisor",
+      "Limerick",
+      "LDCRC"
+    ],
+    "route": "/people/katie",
+    "slug": "katie-001",
+    "profile": {
+      "name": "Dr. Katie Crowley",
+      "image": "KatieCrowley.png",
+      "institution": {
+        "title": "Associate Professor Computer Science & Health Informatics",
+        "location": "Funded Investigator, Lero, University of Limerick"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Limerick",
+        "LDCRC"
+      ],
+      "homepage_url": "https://www.ul.ie/scieng/dr-katie-crowley",
+      "email": "katie.crowley@ul.ie",
+      "bio": [
+        "Dr. Katie Crowley is an academic in the Department of Computer Science and Information Systems at the University of Limerick, where she serves as the Course Director for the MSc in Health Informatics. Her research focuses on the intersection of computer science and healthcare, with particular emphasis on affective computing, human-computer interaction, and health information technology.",
+        "Katie's academic journey began with a BSc in Computer Science from University College Cork, followed by an MSc from the University of Limerick. She later completed her PhD in Computer Science at University College Cork, focusing on Affective Computing and Human-Computer Interaction, supported by an IRCSET scholarship.",
+        "Throughout her career, Katie has built extensive experience in designing and managing research programs, working across multiple prestigious Irish institutions including Trinity College Dublin (Neuroscience/Psychology), University College Cork (Computer Science/Psychology), University of Limerick (Computer Science/Computer & Electronic Engineering), and Munster Technological University (Computer & Electronic Engineering).",
+        "Katie has demonstrated strong leadership in research project management, from stakeholder collaboration to data analysis and implementation. Her work spans the full project lifecycle, emphasizing user-centered design principles and thorough documentation. She has secured significant national funding, including a Science Foundation Ireland Industry Fellowship grant, and regularly leads multidisciplinary teams in both academic and industry partnerships."
+      ],
+      "research_interests": [
+        "Affective Computing",
+        "Human Computer Interaction",
+        "Health Informatics",
+        "User Experience (UX)",
+        "Health IoT/IoMT",
+        "Psychophysiology",
+        "Wearable Technology",
+        "Digital Signal Processing",
+        "Mobile Technology",
+        "Social Technology"
+      ],
+      "expertise": [
+        "Course Director, MSc in Health Informatics",
+        "Project Management & Stakeholder Engagement",
+        "User-Centered Design",
+        "Interdisciplinary Research Leadership",
+        "Industry-Academic Collaboration",
+        "Research Methodology Development"
+      ],
+      "social_links": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/katiecrowley"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/katiecrowley"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=aCA5y-YAAAAJ&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Aedin Culhane",
+    "title": "Professor, University of Limerick",
+    "image": "aedinculhane.png",
+    "tags": [
+      "Project Leader",
+      "Limerick",
+      "LDCRC"
+    ],
+    "route": "/people/aedin",
+    "slug": "aedin-001",
+    "profile": {
+      "name": "Prof Aedin Culhane",
+      "image": "aedinculhane.png",
+      "institution": {
+        "title": "Professor",
+        "location": "University of Limerick"
+      },
+      "role_badges": [
+        "Project Leader",
+        "Limerick",
+        "LDCRC"
+      ],
+      "homepage_url": "https://www.ul.ie/research/prof-aedin-culhane",
+      "email": "aedin.culhane@ul.ie",
+      "affiliations": [
+        "Director, Limerick Digital Cancer Center",
+        "Lead, all-island eHealth-Hub for Cancer",
+        "Member, All-Ireland Cancer Institute Steering Group"
+      ],
+      "bio": [
+        "Aed\u00edn Culhane is a Professor of Biomedical Sciences (Cancer Genomics) at UL School of Medicine. With expertise in multi-omics data integration, statistical genomics, and clinical bioinformatics, she has over 20 years of experience in cancer genomics, including 15 years at Dana-Farber Cancer Institute and Harvard TH Chan School of Public Health.",
+        "Her research focuses on algorithm development and integrative analysis of single-cell molecular data in cancer to identify key molecules in tumor progression, drug response, and resistance. She is also a member of the Human Cell Atlas project.",
+        "Aed\u00edn is a leader in the Bioconductor community, a global open-source initiative for genomics in R, and an advocate for open-source science."
+      ],
+      "research_interests": [
+        "Cancer Computational Genomics",
+        "Digital Health",
+        "Single Cell Genomics",
+        "Spatial Biology",
+        "Cancer Genomics",
+        "Algorithm Development",
+        "Immune-Oncology",
+        "Genomics Programs",
+        "Real World Evidence",
+        "Open Science"
+      ],
+      "associated_institutions": [
+        {
+          "name": "Dana-Farber Cancer Institute",
+          "url": "https://www.dana-farber.org/research/departments-centers/data-science"
+        },
+        {
+          "name": "Harvard TH Chan School of Public Health",
+          "url": "https://www.hsph.harvard.edu/biostatistics"
+        },
+        {
+          "name": "Bioconductor Project",
+          "url": "https://www.bioconductor.org"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/AedinCulhane"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/aedin"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/aedinculhane"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=O8OszPcAAAAJ&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Bill Watson",
+    "title": "Professor, University College Dublin",
+    "image": "BillWatson.jpeg",
+    "tags": [
+      "Project Supervisor",
+      "Dublin",
+      "UCD"
+    ],
+    "route": "/people/bill",
+    "slug": "bill-001",
+    "profile": {
+      "name": "Prof Bill Watson",
+      "image": "BillWatson.jpeg",
+      "institution": {
+        "title": "Professor",
+        "location": "University College Dublin"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Dublin",
+        "UCD"
+      ],
+      "homepage_url": "https://people.ucd.ie/william.watson/grants",
+      "email": "william.watson@ucd.ie",
+      "affiliations": [
+        "Head of Pathology",
+        "Director, Biomedical Health and Life Science BSc"
+      ],
+      "bio": [
+        "Professor Bill Watson is a distinguished Professor of Cancer Biology in the UCD School of Medicine, where he serves as Head of Pathology and Director of the Biomedical Health and Life Science honours BSc programme. His expertise spans fundamental cancer biology and translational research, with a particular focus on prostate cancer.",
+        "Professor Watson's academic journey began with his PhD in Biochemistry from University College Cork in 1995, followed by post-doctoral research at the University of Toronto and Toronto General Hospital in Canada. In 1997, he joined University College Dublin as a college Lecturer in the Department of Surgery at the Mater Misericordiae University Hospital, where he has since built an internationally recognized research program.",
+        "As the lead Principal Investigator of the Prostate Cancer Research Consortium (PCRC), Professor Watson directs a multidisciplinary team of scientists and clinicians addressing crucial clinical challenges in prostate cancer. His research utilizes cutting-edge technologies at the Conway Institute to study cellular and molecular pathways, working closely with clinical collaborators to advance our understanding of prostate cancer initiation and progression.",
+        "His research has attracted significant funding from prestigious bodies including Science Foundation Ireland, the Health Research Board, Enterprise Ireland, Irish Cancer Society, Prostate Cancer Foundation, and Movember. With an H-index of 55, his work has been published in leading peer-reviewed journals such as European Urology, Cancers, BJU International, Oncotarget, and Molecular Oncology."
+      ],
+      "research_interests": [
+        "Prostate Cancer Biology",
+        "Biomarker Discovery",
+        "Treatment Resistance",
+        "Molecular Pathways",
+        "Translational Research",
+        "Cancer Therapeutics",
+        "Clinical Biomarkers",
+        "Cancer Progression",
+        "Therapy Resistance",
+        "Precision Medicine"
+      ],
+      "research_focus": [
+        {
+          "title": "Biomarker Discovery and Validation",
+          "description": "Leveraging PCRC resources to identify and validate biomarkers for prostate cancer grade and stage, informing treatment strategies"
+        },
+        {
+          "title": "Therapy Resistance Mechanisms",
+          "description": "Investigating resistance to androgen ablation therapy and chemotherapy through genomic and bioinformatic approaches"
+        },
+        {
+          "title": "Translational Research",
+          "description": "Bridging laboratory discoveries with clinical applications through international collaborations and the Movember Global Action Plan"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=3sIZx1sAAAAJ&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Ian Overton",
+    "title": "Reader, School of Medicine, Dentistry and Biomedical Sciences, Patrick G Johnston Centre for Cancer Research, Queens University, Belfast",
+    "image": "ianOverton.png",
+    "tags": [
+      "Project Supervisor",
+      "Belfast",
+      "QUB"
+    ],
+    "route": "/people/ian",
+    "slug": "ian-001",
+    "profile": {
+      "name": "Prof Ian Overton",
+      "image": "ianOverton.png",
+      "institution": {
+        "title": "Reader",
+        "location": "School of Medicine, Dentistry and Biomedical Sciences, Patrick G Johnston Centre for Cancer Research, Queens University, Belfast"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Belfast",
+        "QUB"
+      ],
+      "homepage_url": "https://pure.qub.ac.uk/en/persons/ian-overton",
+      "email": "I.Overton@qub.ac.uk",
+      "bio": [
+        "Prof Ian Overton is a Reader in the School of Medicine, Dentistry and Biomedical Sciences at Queen's University Belfast, where he leads research at the intersection of computational biology and cancer medicine. His work focuses on understanding the complex molecular mechanisms that drive cancer progression and treatment resistance.",
+        "Prof Overton's research employs sophisticated computational approaches to decode how cancer cells spread throughout the body (metastasis) and develop resistance to treatments - two critical factors that account for the majority of cancer-related deaths. His lab integrates vast amounts of molecular data, including DNA and protein information, to map and analyze the intricate networks that control cellular function.",
+        "Using advanced statistical inference and machine learning techniques, Prof Overton's team processes billions of data points to reveal the molecular logic underlying health and disease. This computational approach is fundamental to modern biology, enabling the interpretation of complex systems through large-scale data analysis.",
+        "A key focus of his work is developing software solutions that can meaningfully interpret large datasets and inform clinical decision-making, particularly in predicting patient responses to specific treatments. His research aims to identify molecular 'weak points' that could be targeted for personalized cancer treatments, ultimately working to translate these findings into practical medical applications through collaboration with clinical colleagues."
+      ],
+      "research_interests": [
+        "Cancer Metastasis",
+        "Drug Resistance Mechanisms",
+        "Machine Learning in Medicine",
+        "Network Biology",
+        "Molecular Systems Biology",
+        "Computational Biology",
+        "Cancer Personalized Medicine",
+        "Patient Stratification",
+        "Big Data Analytics",
+        "Clinical Decision Support"
+      ],
+      "research_areas": [
+        {
+          "title": "Molecular Control in Cancer",
+          "description": "Understanding cell phenotypic plasticity in metastasis and drug resistance to identify molecular 'Achilles' heels' for personalized medicine"
+        },
+        {
+          "title": "Patient Stratification",
+          "description": "Developing more effective approaches for cancer patient stratification and treatment pathway optimization"
+        },
+        {
+          "title": "Computational Methods",
+          "description": "Generation of novel algorithms and computational workflows for advanced cancer research and treatment"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "Twitter",
+          "url": "https://x.com/IOvertonScience"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=-jpF9EgAAAAJ&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Mark Lawler",
+    "title": "Professor, Queens University Belfast",
+    "image": "MarkLawler.jpg",
+    "tags": [
+      "Project Leader",
+      "Belfast",
+      "QUB"
+    ],
+    "route": "/people/mark",
+    "slug": "mark-001",
+    "profile": {
+      "name": "Prof. Mark Lawler",
+      "image": "MarkLawler.jpg",
+      "institution": {
+        "title": "Professor",
+        "location": "Queens University Belfast"
+      },
+      "role_badges": [
+        "Project Leader",
+        "Belfast",
+        "QUB"
+      ],
+      "homepage_url": "https://www.data-can.org.uk/about-us/management-group/professor-mark-lawler/",
+      "email": "mark.lawler@qub.ac.uk",
+      "bio": [
+        "Professor Lawler is an internationally renowned scientist with over 30 years experience in cancer research, who is passionate about translating his research for the benefit of patients and society.",
+        "He has received numerous awards including the prestigious 2018 European Health Award and he is frequently invited to speak at top-tier international conferences.",
+        "He was architect of the European Cancer Patient's Bill of Rights, which he launched with patients and health professionals in the European Parliament on World Cancer Day 2014. The Bill of Rights, translated into 17 European languages and adopted in 25 European countries, is a beacon of hope for cancer patients Europe-wide, leading to development of the 70:35 Vision - 70% average survival for cancer patients by 2035. This Vision has been adopted by the European CanCer Organisation, the largest multidisciplinary cancer organisation in Europe, and is influencing health policy in many European countries.",
+        "His research in colorectal cancer (CRC) has increased our understanding of this common disease. His leadership of Bowel Cancer UK's Critical Research Gaps in Colorectal Cancer Initiative will influence CRC research activity/policy over the next decade.",
+        "Professor Lawler is Associate Director of Health Data Research Wales-Northern Ireland and Scientific Director of DATA-CAN, the UK Health Data Research Hub for Cancer. His leadership in heath data research, with a particular emphasis on cancer has been world leading with key publications in the premier scientific and medical journals.",
+        "His recent work on Coronavirus and cancer, highlighting how the current COVID-19 pandemic may lead to a future cancer epidemic, has received international recognition, with over 300 media stories and publications in key international scientific journals.",
+        "Professor Lawler is also a passionate advocate for the development of outreach activities, fostering increased public understanding of science and medicine."
+      ],
+      "research_interests": [
+        "Cancer Research",
+        "Health Data Research",
+        "Colorectal Cancer",
+        "Patient Rights & Policy",
+        "COVID-19 Impact on Cancer",
+        "Public Health Policy",
+        "Cancer Epidemiology",
+        "Health Data Analytics",
+        "Medical Outreach",
+        "International Collaboration"
+      ],
+      "key_initiatives": [
+        {
+          "title": "European Cancer Patient's Bill of Rights",
+          "link": "https://ecpc.org/european-bill-of-cancer-patients-rights/"
+        },
+        {
+          "title": "Bowel Cancer Research Initiative",
+          "link": "https://www.huffingtonpost.co.uk/entry/over-300000-people-will-needlessly-die-from-bowel-cancer-by-2035-because-of-research-gaps-charity-warns_uk_5a2e72fce4b069ec48aece15"
+        },
+        {
+          "title": "DATA-CAN",
+          "link": "https://www.data-can.org.uk/"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "Twitter",
+          "url": "https://x.com/QUBCancerProf"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/mark-lawler-b8387324/"
+        },
+        {
+          "name": "Publications",
+          "url": "https://pure.qub.ac.uk/en/persons/mark-lawler/publications/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Nina Orfali",
+    "title": "Consultant Haematologist, St. James's Hospital Dublin",
+    "image": "NinaOrfali.png",
+    "tags": [
+      "Project Supervisor",
+      "Dublin",
+      "St James"
+    ],
+    "route": "/people/nina",
+    "slug": "nina-001",
+    "profile": {
+      "name": "Dr. Nina Orfali",
+      "image": "NinaOrfali.png",
+      "institution": {
+        "title": "Consultant Haematologist",
+        "location": "St. James's Hospital Dublin"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Dublin",
+        "St James"
+      ],
+      "homepage_url": "https://www.stjames.ie/services/hope/nationalstemcelltransplantunit/",
+      "email": "conneallysec@stjames.ie",
+      "bio": [
+        "Dr Nina Orfali is a Consultant Haematologist at St. James's Hospital Dublin, where she joined the team in 2020. As a member of the Adult Bone Marrow Transplant team, she brings extensive international experience and specialized expertise in stem cell transplantation and myeloid malignancies.",
+        "A medical graduate of NUI Galway, Dr Orfali's career path reflects a commitment to both clinical excellence and research innovation. Her early training included internal medicine experience at both Galway University Hospital and the prestigious Mayo Clinic in Minnesota. She further developed her expertise through laboratory research at the Cork Cancer Research Centre and Weill Cornell University in New York, earning her PhD from UCC for groundbreaking work on autophagy in leukaemic cell differentiation.",
+        "After completing her haematology specialist training in Ireland, Dr Orfali pursued advanced specialization in stem cell transplantation through a two-year fellowship at Cornell University in New York. This international experience has helped shape her current research focus, which includes developing strategies to reduce relapse and strengthen immune system function post-donor stem cell transplantation.",
+        "Currently, Dr Orfali's research concentrates on the significance and prognostic impact of gene mutations in myeloid disease, maintaining active collaborations with researchers at Cornell University. She is particularly focused on myeloid malignancies, including acute myeloid leukaemia, myelodysplastic syndromes, and myeloproliferative disorders."
+      ],
+      "research_interests": [
+        "Myeloid Malignancies",
+        "Stem Cell Transplantation",
+        "Cellular Therapy",
+        "Translational Medicine",
+        "Autophagy Research",
+        "Immune System Enhancement",
+        "Gene Mutation Analysis",
+        "Differentiation Therapy",
+        "Post-transplant Care",
+        "Clinical Research"
+      ],
+      "qualifications": [
+        "MB BCh BAO - NUI Galway",
+        "MRCPI - Royal College of Physicians of Ireland",
+        "FRCPath - Royal College of Pathology, UK",
+        "PhD - University College Cork"
+      ],
+      "memberships": [
+        "Royal College of Physicians of Ireland",
+        "Royal College of Pathology, UK",
+        "Haematology Association of Ireland (HAI)",
+        "American Society of Haematology (ASH)",
+        "American Society of Transplantation and Cellular Therapy (ASTCT)"
+      ],
+      "social_links": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/nina-orfali-mb-mrcpi-frcpath-phd-9a782668/"
+        },
+        {
+          "name": "ResearchGate",
+          "url": "https://www.researchgate.net/profile/Nina-Orfali"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Ruth Clifford",
+    "title": "Consultant Haematologist, University Hospital Limerick",
+    "image": "RuthClifford.jpg",
+    "tags": [
+      "Project Leader",
+      "Limerick",
+      "LDCRC"
+    ],
+    "route": "/people/ruth",
+    "slug": "ruth-001",
+    "profile": {
+      "name": "Prof. Ruth Clifford",
+      "image": "RuthClifford.jpg",
+      "institution": {
+        "title": "Consultant Haematologist",
+        "location": "University Hospital Limerick"
+      },
+      "role_badges": [
+        "Project Leader",
+        "Limerick",
+        "LDCRC"
+      ],
+      "homepage_url": "https://www.ul.ie/limerick-dcrc/professor-ruth-clifford",
+      "email": "ruth.clifford1@hse.ie",
+      "bio": [
+        "Prof. Ruth Clifford is a Consultant Haematologist at UHL since November 2016. Her clinical practice is in malignant haematology, in particular, the care of patients with lymphoid malignancies including chronic lymphocytic leukaemia (CLL). Key areas of research include: the study of genetic changes driving the development of blood cancers and factors leading to relapse and resistant disease. In addition, Ruth has an interest in innovating diagnostic pathways for patients, applying novel tech and AI tools, to aid accurate and timely diagnosis of blood cancers and to improve patient acquisition to clinical trials.",
+        "Ruth received her medical degree from NUI Galway in 2002 and began her specialist haematology training in Ireland in 2006 later transferring to Oxford. She was awarded a Cancer Research UK Fellowship to undertake a PhD at the University of Oxford. Her doctoral research focused on the applications of Next Generation Sequencing Technologies in Leukaemia. A key finding of this work was the discovery of a novel gene mutation in SAMHD1 that predicts chemotherapy resistance in CLL. She has published with numerous UK and European CLL groups and continues to maintain active links in the haematology genomics research field.",
+        "Ruth is the translational co-chair of the Haematology and Lymphoma DSSG of Cancer Trials Ireland clinical trial network. She is an Investigator with the Blood Cancer Network Ireland and a member of the molecular advisory group for the National Cancer Control Programme that guides the development of a national infrastructure for partner diagnostics in Haemato-Oncology.",
+        "Within UL, Ruth is a pillar lead for the Basic Sciences Pillar of ULCan and a member of the Limerick DCRC Development Committee. Ruth has a number of active collaborative research projects across the ULCan pillars and is keen to progress links between ULHG and UL on cutting edge cancer research for the benefit of the Mid West and the broader cancer community."
+      ],
+      "research_interests": [
+        "Malignant Haematology",
+        "Lymphoid Malignancies",
+        "Chronic Lymphocytic Leukaemia",
+        "Cancer Genetics",
+        "Drug Resistance Studies",
+        "Next Generation Sequencing",
+        "Diagnostic Innovation",
+        "AI in Cancer Diagnostics",
+        "Clinical Trials",
+        "Translational Research"
+      ],
+      "positions": [
+        "Consultant Haematologist, University Hospital Limerick",
+        "Translational Co-Chair, Haematology and Lymphoma DSSG, Cancer Trials Ireland",
+        "Investigator, Blood Cancer Network Ireland",
+        "Member, Molecular Advisory Group, National Cancer Control Programme",
+        "Pillar Lead, Basic Sciences Pillar of ULCan",
+        "Member, Limerick DCRC Development Committee"
+      ],
+      "social_links": [
+        {
+          "name": "Twitter",
+          "url": "https://x.com/RuthClifford5"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.de/citations?user=huGfo9EAAAAJ&hl=de"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Prof Simon McDade",
+    "title": "Reader, Patrick G Johnston Centre for Cancer Research, Queens University, Belfast",
+    "image": "simonmcdade.png",
+    "tags": [
+      "Project Supervisor",
+      "Belfast",
+      "QUB"
+    ],
+    "route": "/people/simon",
+    "slug": "simeon-001",
+    "profile": {
+      "name": "Dr. Simon McDade",
+      "image": "simonmcdade.png",
+      "institution": {
+        "title": "Reader",
+        "location": "Patrick G Johnston Centre for Cancer Research, Queens University, Belfast"
+      },
+      "role_badges": [
+        "Project Supervisor",
+        "Belfast",
+        "QUB"
+      ],
+      "homepage_url": "https://www.qub.ac.uk/schools/mdbs/Research/find-a-phd-supervisor/dr-simon-mcdade.html",
+      "email": "askmhls@qub.ac.uk",
+      "bio": [
+        "Dr Simon McDade is a Reader at the Patrick G Johnston Centre for Cancer Research, Queens University Belfast, where he leads the Functional Genomics (FGG) laboratory. His research combines cutting-edge genomic technologies with innovative data analysis approaches to develop novel treatment strategies for cancer patients.",
+        "At the forefront of cancer genomics research, Dr McDade's laboratory specializes in utilizing a comprehensive range of genomic technologies including RNA-seq, ChIP-seq, and CRISPR screening. This work is complemented by the development of sophisticated integrative data analysis tools, bridging the gap between complex genomic data and clinical applications.",
+        "Dr McDade's research particularly focuses on understanding transcription factor dysfunction in cancer, with special emphasis on the p53 family. His team's work aims to identify genes and processes altered by mutation or de-regulation that could be exploited for diagnostic or therapeutic purposes. This research spans multiple cancer types, including colorectal, prostate, and squamous cancers.",
+        "Under Dr McDade's leadership, the laboratory has developed significant expertise in epigenetic research and computational tool development, including the creation of specialized data analysis and Shiny applications. His team welcomes diverse expertise, from biological sciences to computational analysis, fostering an interdisciplinary approach to cancer research."
+      ],
+      "research_interests": [
+        "Functional Genomics",
+        "Cancer Transcription Factors",
+        "Integrative Data Analysis",
+        "CRISPR Technology",
+        "Epigenetics",
+        "Cancer Therapeutics",
+        "Computational Biology",
+        "Molecular Diagnostics",
+        "Precision Medicine",
+        "Bioinformatics"
+      ],
+      "research_areas": [
+        {
+          "title": "Genomic Technologies",
+          "description": "Utilizing RNA-seq, ChIP-seq, and CRISPR screening to understand cancer mechanisms"
+        },
+        {
+          "title": "Cancer Biology",
+          "description": "Focus on transcription factor dysfunction in colorectal, prostate, and squamous cancers"
+        },
+        {
+          "title": "Computational Tools",
+          "description": "Development of data analysis tools and Shiny applications for cancer research"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/simonmcdade/"
+        },
+        {
+          "name": "Google Scholar",
+          "url": "https://scholar.google.co.uk/citations?user=3TXRQVSOwGMC&hl=en"
+        }
+      ]
+    }
+  },
+  {
+    "name": "David Chibuike Ikechi Akwuru",
+    "title": "Doctoral Student in Digital Health in Cancer Research, University of Limerick",
+    "image": "DavidAkwuru.jpg",
+    "tags": [
+      "Doctoral Student",
+      "UL",
+      "Limerick",
+      "Lero"
+    ],
+    "route": "----",
+    "slug": "david-001",
+    "profile": {
+      "name": "Akwuru David Chibuike Ikechi",
+      "image": "DavidAkwuru.jpg",
+      "institution": {
+        "title": "University of Limerick",
+        "location": "Limerick, Ireland"
+      },
+      "role_badges": [
+        "PhD Student",
+        "Researcher",
+        "Commonwealth Scholar"
+      ],
+      "homepage_url": "https://ng.linkedin.com/in/david-akwuru",
+      "email": "akwuru.david@ul.ie",
+      "supervisors": [
+        "Prof. Katie Crowley",
+        "Prof. Nina Orfali",
+        "Prof. Aedin Culhane"
+      ],
+      "bio": [
+        "Hi, I'm Akwuru David Chibuike Ikechi, a Doctoral student at the University of Limerick. My research focuses on building a framework for harmonizing data and enabling the federated sharing of AML cancer data across all of Ireland, under the guidance of Prof. Katie Crowley, Prof. Nina Orfali, and Prof. Aedin Culhane. We aim to adopt the OHDSI OMOP Common Data Model to harmonize AML data across healthcare institutions in Ireland and Northern Ireland, fostering improved research and clinical outcomes through interoperable data systems.",
+        "I hold a Bachelor's degree in Computer Science from the University of Port Harcourt, Nigeria, and a Master's degree in Digital Health from the University of St. Andrews, United Kingdom, sponsored by the Commonwealth Scholarship Commission. My academic journey has been shaped by an interdisciplinary approach, bridging computing and healthcare to address critical challenges, especially in cancer research. This experience fuels my drive to leverage technology for enhanced clinical care and outcomes",
+        "As part of my doctoral research, I have conducted a comprehensive landscape analysis of myeloid clinical data across institutions on the island of Ireland, identifying key gaps in data collection, sharing, and standardization. Currently, I am working on a scoping review to examine best practices for AML data management, sharing, and standardization in high-income countries, with the goal of adapting these strategies to benefit the Irish healthcare system. Ultimately, my work intends to create a unified framework for AML data that enhances interoperability, facilitates federated sharing, and improves collaborative research efforts across institutions. As Nelson Mandela once said, 'It always seems impossible until it is done.' This quote inspires my mission to overcome the challenges in harmonizing healthcare data and making meaningful progress in cancer research."
+      ],
+      "research_interests": [
+        "Federated Data Sharing",
+        "Myeloid Malignancies",
+        "Cancer Research",
+        "Machine Learning in Healthcare",
+        "Biomedical Imaging",
+        "Software Development",
+        "Algorithms"
+      ],
+      "positions": [
+        "PhD Student at University of Limerick"
+      ],
+      "key_initiatives": [
+        {
+          "title": "BCNI Symposium",
+          "link": "https://www.bloodcancers.ie/bloodcancers/newsevents/bcni-blood-cancer-symposium---friday-24th-may-2024.html"
+        },
+        {
+          "title": "Lero Summit in Athlone",
+          "link": "https://www.ul.ie/news/five-university-of-limerick-researchers-presented-with-prestigious-lero-awards"
+        },
+        {
+          "title": "OHDSI HDRUK Conference in the UK",
+          "link": "https://www.hdruk.ac.uk/hdruk-conference-2024/"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/david-akwuru/"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://x.com/AkwuruI"
+        },
+        {
+          "name": "Github",
+          "url": "https://github.com/DavidIkechi?tab=repositories"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Jeremiah Seyi Akintomide",
+    "title": "Doctoral Student in Digital Health in Cancer Research, University of Limerick",
+    "image": "JeremiahAkintomide.png",
+    "tags": [
+      "Doctoral Student",
+      "UL",
+      "Limerick",
+      "Lero"
+    ],
+    "route": "----",
+    "slug": "jeremiah-001",
+    "profile": {
+      "name": "Jeremiah Akintomide",
+      "image": "JeremiahAkintomide.png",
+      "institution": {
+        "title": "University of Limerick",
+        "location": "Limerick, Ireland"
+      },
+      "role_badges": [
+        "PhD Student",
+        "Researcher",
+        "Commonwealth Scholar"
+      ],
+      "homepage_url": "https://pure.ul.ie/en/persons/jeremiah-akintomide",
+      "email": "Jeremiah.Akintomide@ul.ie",
+      "supervisors": [
+        "Dr. Katie Crowley",
+        "Dr. Amir Jalali"
+      ],
+      "bio": [
+        "PhD researcher at the University of Limerick, focusing on advancing prostate cancer detection through digital health technologies and standardized healthcare data frameworks.",
+        "I hold an MSc in Health Data Science with Distinction from the University of St Andrews and a BSc in Computer Science with First Class Honours. My research centers on improving prostate cancer detection and treatment by using digital health technologies and standardizing healthcare data across institutions with the OMOP (Observational Medical Outcomes Partnership) Common Data Model.",
+        "Using OHDSI (Observational Health Data Sciences and Informatics) tools, I aim to transform institutional data into a unified format to facilitate data-driven clinical insights. The ultimate goal of my project is to develop a Clinical Decision Support System (CDSS) that reduces unnecessary prostate biopsies, minimizing patient risk and enhancing diagnostic accuracy. This research is part of an All-Island initiative promoting cross-border collaboration in healthcare across Ireland."
+      ],
+      "research_interests": [
+        "Digital Health Technologies",
+        "Prostate Cancer",
+        "Federated Data Standardization",
+        "Machine Learning in Healthcare",
+        "Biomedical Informatics"
+      ],
+      "positions": [
+        "PhD Student at University of Limerick"
+      ],
+      "key_initiatives": [
+        {
+          "title": "IPCOR Initiative",
+          "link": "https://www.ipcor.ie/"
+        },
+        {
+          "title": "Lero Summit in Athlone",
+          "link": "https://lero.ie/"
+        },
+        {
+          "title": "HDR UK Prostate Cancer Symposium",
+          "link": "https://www.hdruk.ac.uk/hdruk-conference-2024/"
+        }
+      ],
+      "social_links": [
+        {
+          "name": "LinkedIn",
+          "url": "https://pure.ul.ie/en/persons/jeremiah-akintomide"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://x.com/Prof_Seyii"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/Profjay22"
+        }
+      ]
+    }
+  }
+]

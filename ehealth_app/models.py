@@ -13,24 +13,20 @@ class Tag(models.Model):
         return self.name
 
 
+class PeopleTitle(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+
 # People model
 class People(models.Model):
-    class TitleChoices(models.TextChoices):
-        BLANK = "", ""
-        MR = "Mr.", "Mr."
-        MRS = "Mrs.", "Mrs."
-        MS = "Ms.", "Ms."
-        DR = "Dr.", "Dr.",
-        ASSOC_PROF = "Assoc. Prof.", "Assoc. Prof.",
-        PROF = "Prof.", "Prof.",
-    
-    
-    title = models.CharField(
-        max_length=20,
-        choices=TitleChoices.choices,
-        default=TitleChoices.BLANK,
-        blank=True
-
+    title = models.ForeignKey(
+        PeopleTitle, on_delete=models.PROTECT, blank=True, null=True, related_name='people',
     )
     full_name = models.CharField(max_length=100)
     association = models.TextField()
@@ -47,8 +43,38 @@ class People(models.Model):
         super(People, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.title + " " + self.full_name
+        return f"{self.title or ''} {self.full_name}".strip()
     
+class PeopleResearchLink(models.Model):
+    """A named research output linked from a person's profile."""
+
+    class Category(models.TextChoices):
+        PUBLICATION = 'publication', 'Publication'
+        POSTER = 'poster', 'Poster'
+        PRESENTATION = 'presentation', 'Presentation'
+        OTHER = 'other', 'Other'
+
+    people = models.ForeignKey(People, on_delete=models.CASCADE, related_name='research_links')
+    title = models.CharField(max_length=255)
+    category = models.CharField(max_length=20, choices=Category.choices, default=Category.PUBLICATION)
+    url = models.URLField(max_length=2000)
+    date = models.DateField(blank=True, null=True, help_text='Publication or event date.')
+    location = models.CharField(max_length=255, blank=True)
+    authors = models.TextField(blank=True, help_text='Authors in credited order, including external collaborators.')
+    venue = models.CharField(max_length=255, blank=True, help_text='Conference, event, or journal name.')
+    doi = models.CharField(max_length=255, blank=True, verbose_name='DOI')
+    description = models.TextField(blank=True, help_text='Optional abstract or summary.')
+    position = models.PositiveIntegerField(default=0, help_text='Lower numbers appear first.')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['position', 'id']
+
+    def __str__(self):
+        return self.title
+
+
 class ResearchInterest(models.Model):
     name = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -7,19 +7,27 @@ class TagSerializer(serializers.ModelSerializer):
         model = Tag
         fields = '__all__'
 
+class PeopleResearchLinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PeopleResearchLink
+        fields = ['id', 'title', 'category', 'url', 'date', 'location', 'authors', 'venue', 'doi', 'description']
+
+
 class PeopleSerializer(serializers.ModelSerializer):
+    title = serializers.SlugRelatedField(slug_field='name', read_only=True)
+    research_links = PeopleResearchLinkSerializer(many=True, read_only=True)
     tags = serializers.SerializerMethodField()  # Use a custom field
     full_title_name = serializers.SerializerMethodField()  # Add this field
     class Meta:
         model = People
         fields = [
-            'id', 'title', 'full_name', 'full_title_name', 'association', 'image', 
-            'slug', 'created_at', 'updated_at', 'tags'
+            'id', 'title', 'full_name', 'full_title_name', 'association', 'image',
+            'slug', 'created_at', 'updated_at', 'tags', 'research_links'
         ]
 
     def get_tags(self, obj):
         return [tag.name for tag in obj.tags.all()]  # Return only tag names
-    
+
     def get_full_title_name(self, obj):
         """Return the full name with the title."""
         title = obj.title if obj.title else ""  # Ensure title is not None
@@ -28,6 +36,7 @@ class PeopleSerializer(serializers.ModelSerializer):
 
 # get people information based on the people slug
 class PeopleInformationSerializer(serializers.ModelSerializer):
+    research_links = PeopleResearchLinkSerializer(source='people.research_links', many=True, read_only=True)
     people = serializers.SerializerMethodField()
     full_name = serializers.SerializerMethodField()
     email = serializers.SerializerMethodField()
@@ -46,12 +55,12 @@ class PeopleInformationSerializer(serializers.ModelSerializer):
     class Meta:
         model = PeopleInformation
         fields = [
-            'id', 'people', 'slug', 'full_name', 'image', 'research_interests', 
-            'areas_of_expertise', 'key_initiatives', 
-            'research_areas', 'qualifications', 
+            'id', 'people', 'slug', 'full_name', 'image', 'research_interests',
+            'areas_of_expertise', 'key_initiatives',
+            'research_areas', 'qualifications',
             'role_badge', 'about_user', 'institution',
             'memberships', 'social_links',  # Include social_links
-            'created_at', 'updated_at', 'email', 'homepage_url'
+            'created_at', 'updated_at', 'email', 'homepage_url', 'research_links'
         ]
 
     def get_email(self, obj):
@@ -60,25 +69,25 @@ class PeopleInformationSerializer(serializers.ModelSerializer):
                 if link.platform.name.lower() == "email":
                     return link.url
         return None
-    
+
     def get_homepage_url(self, obj):
         if obj.people:
             for link in obj.people.social_links.all():
                 if link.platform.name.lower() == "homepage":
                     return link.url
         return None
-    
+
 
     def get_people(self, obj):
         """Return the full name of the related person."""
         return obj.people.full_name if obj.people else None
-    
+
     def get_full_name(self, obj):
         """Return the full name of the related person."""
         title = obj.people.title if obj.people.title else ""  # Ensure title is not None
         name = obj.people.full_name if obj.people.full_name else ""  # Ensure full_name is not None
         return f"{title} {name}".strip()  # Concatenate title and full name
-    
+
     def get_slug(self, obj):
         """Return the slug of the related person."""
         return obj.people.slug if obj.people else None
@@ -135,4 +144,4 @@ class PeopleInformationSerializer(serializers.ModelSerializer):
 
     def get_role_badge(self, obj):
         """Return a list of role badges."""
-        return [badge.name for badge in obj.role_badge.all()]    
+        return [badge.name for badge in obj.role_badge.all()]

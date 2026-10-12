@@ -18,6 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import handler404
 from django.shortcuts import render
+from django.conf import settings
+from django.urls import re_path
+from django.views.static import serve
+import os
 
 
 urlpatterns = [
@@ -25,6 +29,10 @@ urlpatterns = [
     path('e_admin/', admin.site.urls),
     path('', include('ehealth_app.urls'))
 ]
+
+# Serve locally generated profile images only in the explicit SQLite test mode.
+if os.environ.get('EHEALTH_TEST_MODE') == '1':
+    urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})]
 
 # Custom 404 handler
 def custom_page_not_found(request, exception):

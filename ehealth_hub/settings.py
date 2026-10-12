@@ -40,7 +40,7 @@ ALLOWED_HOSTS = [
 ]
 # Installed apps
 INSTALLED_APPS = [
-    'jazzmin', 
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,32 +87,26 @@ TEMPLATES = [
     },
 ]
 
-# Database
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=config('DATABASE_URL'),
-#         conn_max_age=600,
-#         ssl_require=True,  # Enforce SSL for production
-#     )
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'ehealth.sqlite3',
-#     }
-# }
-
-DATABASES ={
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+# Use a separate local SQLite database only when manage.py receives --test.
+# Django's test runner creates its own temporary database from this configuration.
+if os.environ.get('EHEALTH_TEST_MODE') == '1':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'ehealth_test.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'HOST': config('DB_HOST'),
+            'PORT': config('DB_PORT'),
+        }
+    }
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -142,6 +136,8 @@ CORS_ALLOW_HEADERS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
     "https://yourdomain.com",
     "https://ehealth4cancer.org",
     "https://www.ehealth4cancer.org",
@@ -160,7 +156,11 @@ CLOUDINARY_STORAGE = {
     'API_KEY': config('API_KEY'),
     'API_SECRET': config('API_SECRET'),
 }
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = (
+    'django.core.files.storage.FileSystemStorage'
+    if os.environ.get('EHEALTH_TEST_MODE') == '1'
+    else 'cloudinary_storage.storage.MediaCloudinaryStorage'
+)
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -231,13 +231,15 @@ CKEDITOR_CONFIGS = {
 }
 # CORS settings
 # CORS_ALLOW_ALL_ORIGINS = True
-JAZZMIN_SETTINGS = {
-    # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "eHealth Admin",
-
-    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "eHealth Admin",
-
-    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_brand": "eHealth Admin",
+UNFOLD = {
+    "SITE_TITLE": "eHealth Admin",
+    "SITE_HEADER": "eHealth Hub",
+    "SITE_SUBHEADER": "People and research",
+    "SITE_SYMBOL": "health_and_safety",
+    "SHOW_HISTORY": True,
+    # Leave THEME unset so each user can choose light, dark, or system appearance.
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+    },
 }

@@ -28,7 +28,7 @@ class TagListView(generics.ListAPIView):
     ordering_fields = ['name']
 
 class PeopleListView(generics.ListAPIView):
-    queryset = People.objects.all()
+    queryset = People.objects.select_related('title').prefetch_related('tags', 'research_links')
     serializer_class = PeopleSerializer
     ordering_fields = ['full_name']
     # order by date created
@@ -45,7 +45,9 @@ class PeopleInformationListView(generics.RetrieveAPIView):
     def get_object(self):
         slug = self.kwargs.get('slug')
         try:
-            return PeopleInformation.objects.get(people__slug=slug)
+            return self.get_queryset().select_related('people', 'people__title').prefetch_related(
+                'people__research_links'
+            ).get(people__slug=slug)
         except PeopleInformation.DoesNotExist:
             raise NotFound(f"No PeopleInformation found for slug: {slug}")
         
@@ -56,7 +58,7 @@ class PeopleInformationAllView(generics.ListAPIView):  # Changed to ListAPIView
 
     def get_queryset(self):
         # Optionally, you can add filtering or additional logic here
-        return PeopleInformation.objects.all().select_related('people').prefetch_related(
+        return PeopleInformation.objects.all().select_related('people', 'people__title').prefetch_related(
             'research_interests',
             'areas_of_expertise',
             'key_initiatives',
@@ -64,7 +66,8 @@ class PeopleInformationAllView(generics.ListAPIView):  # Changed to ListAPIView
             'qualifications',
             'memberships',
             'role_badge',
-            'people__social_links'
+            'people__social_links',
+            'people__research_links'
         )
 
 def home(request):

@@ -60,6 +60,8 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+ehealth_test.sqlite3
+ehealth_test.sqlite3-*
 
 # Flask stuff:
 instance/
@@ -163,3 +165,4 @@ cython_debug/
 myenv*
 myenv2
 staticfiles
+media/people_images/samples/
