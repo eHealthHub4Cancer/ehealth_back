@@ -36,9 +36,23 @@ ALLOWED_HOSTS = [
     "www.ehealth4cancer.org",
     "ehealth4cancer.eu",
     "www.ehealth4cancer.eu",
+    "api.ehealth4cancer.eu",
     "ehealthhub4cancer.github.io/ehealth_hub",
 ]
 # Installed apps
+CSRF_TRUSTED_ORIGINS = config(
+    'CSRF_TRUSTED_ORIGINS',
+    default=(
+        'https://ehealth4cancer.org,https://www.ehealth4cancer.org,'
+        'https://ehealth4cancer.eu,https://www.ehealth4cancer.eu'
+    ),
+    cast=lambda value: [origin.strip() for origin in value.split(',') if origin.strip()],
+)
+
+# Enable only when the hosting proxy sets and sanitizes X-Forwarded-Proto.
+if config('TRUST_HTTPS_PROXY', default=False, cast=bool):
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 INSTALLED_APPS = [
     'unfold',
     'django.contrib.admin',
@@ -145,7 +159,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://www.ehealth4cancer.ie",
     "http://www.ehealth4cancer.ie",
     "http://www.ehealth4cancer.org",
+    "https://api.ehealth4cancer.eu",
 ]
+
+
 
 CORS_ALLOW_CREDENTIALS = True  # Allow cookies or credentials to be sent
 

@@ -46,7 +46,7 @@ class PeopleInformationListView(generics.RetrieveAPIView):
         slug = self.kwargs.get('slug')
         try:
             return self.get_queryset().select_related('people', 'people__title').prefetch_related(
-                'people__research_links'
+                'people__research_links', 'people__social_links__platform'
             ).get(people__slug=slug)
         except PeopleInformation.DoesNotExist:
             raise NotFound(f"No PeopleInformation found for slug: {slug}")
@@ -66,7 +66,7 @@ class PeopleInformationAllView(generics.ListAPIView):  # Changed to ListAPIView
             'qualifications',
             'memberships',
             'role_badge',
-            'people__social_links',
+            'people__social_links__platform',
             'people__research_links'
         )
 

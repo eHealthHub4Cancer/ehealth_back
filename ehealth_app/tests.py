@@ -1,4 +1,4 @@
-from django.test import TestCase, override_settings
+from django.test import Client, TestCase, override_settings
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.core.management import call_command
@@ -6,11 +6,30 @@ from io import StringIO
 from tempfile import TemporaryDirectory
 from pathlib import Path
 
-from .models import People, PeopleInformation, PeopleResearchLink, PeopleTitle
+from .models import People, PeopleInformation, PeopleResearchLink, PeopleTitle, SocialPlatform, PeopleSocialLink
 
 
 @override_settings(STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage')
 class AdminThemeTests(TestCase):
+    @override_settings(ALLOWED_HOSTS=['ehealth4cancer.org'])
+    def test_login_accepts_trusted_https_origin_but_requires_csrf_token(self):
+        client = Client(enforce_csrf_checks=True)
+        response = client.get(reverse('admin:login'), HTTP_HOST='ehealth4cancer.org')
+        self.assertEqual(response.status_code, 200)
+        token = client.cookies['csrftoken'].value
+        response = client.post(reverse('admin:login'), {
+            'username': 'invalid-user', 'password': 'invalid-password', 'csrfmiddlewaretoken': token,
+        }, HTTP_HOST='ehealth4cancer.org', HTTP_ORIGIN='https://ehealth4cancer.org')
+        self.assertEqual(response.status_code, 200)
+        response = client.post(reverse('admin:login'), {
+            'username': 'invalid-user', 'password': 'invalid-password', 'csrfmiddlewaretoken': token,
+        }, HTTP_HOST='ehealth4cancer.org', HTTP_ORIGIN='https://untrusted.example.org')
+        self.assertEqual(response.status_code, 403)
+        response = client.post(reverse('admin:login'), {
+            'username': 'invalid-user', 'password': 'invalid-password',
+        }, HTTP_HOST='ehealth4cancer.org', HTTP_ORIGIN='https://ehealth4cancer.org')
+        self.assertEqual(response.status_code, 403)
+
     def test_admin_pages_render_with_theme_selector_and_research_inline(self):
         user = User.objects.create_superuser('theme-test', 'admin@example.org', 'test-password')
         self.client.force_login(user)
@@ -102,6 +121,16 @@ class PeopleResearchLinkTests(TestCase):
                                  ['other', 'presentation', 'poster', 'publication'])
                 self.assertEqual(profile['research_links'][0]['url'], 'https://example.org/other')
                 self.assertNotIn('Unrelated', [link['title'] for link in profile['research_links']])
+
+    def test_production_api_hostname_is_allowed(self):
+        response = self.client.get(reverse('people-list'), HTTP_HOST='api.ehealth4cancer.eu')
+        self.assertEqual(response.status_code, 200)
+
+    def test_social_link_icon_is_in_profile_api(self):
+        platform = SocialPlatform.objects.create(name='LinkedIn', icon='linkedin')
+        PeopleSocialLink.objects.create(people=self.person, platform=platform, url='https://www.linkedin.com/in/example/')
+        response = self.client.get(reverse('people-information', kwargs={'slug': self.person.slug}))
+        self.assertEqual(response.json()['social_links'][0]['icon'], 'linkedin')
 
     def test_person_without_links_returns_empty_list(self):
         response = self.client.get(reverse('people-information', kwargs={'slug': self.person.slug}))
