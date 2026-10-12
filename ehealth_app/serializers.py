@@ -102,6 +102,7 @@ class PeopleInformationSerializer(serializers.ModelSerializer):
             return [
                 {
                     "name": link.platform.name,
+                    "icon": link.platform.icon or "",
                     "url": link.url
                 }
                 for link in obj.people.social_links.all() if link.platform.name.lower() not in ['homepage','email'] # Use related_name to fetch links
