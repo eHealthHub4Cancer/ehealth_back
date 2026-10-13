@@ -1,91 +1,29 @@
+{% extends 'htmls/portal_base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>eHealth Hub Admin</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
-  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="" class="logo d-flex align-items-center me-auto">
-        <img src="{% static 'images/eHealthHub_logo.png' %}" alt="">
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/docs/" class="active">Read docs</a></li>
-          </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="https://www.ehealth4cancer.ie" target="_blank">eHealth Hub</a>
-
+{% block title %}Research administration · eHealth-Hub for Cancer{% endblock %}
+{% block home_active %}aria-current="page"{% endblock %}
+{% block content %}
+<main id="main" class="landing">
+  <section class="hero project-hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> All-island partnership · Research administration</p>
+      <h1>The eHealth-Hub<br><em>for Cancer.</em></h1>
+      <p class="project-subtitle">Connecting health data.<br>Advancing cancer research.</p>
+      <p class="lead">An all-island partnership building software and data platforms to harmonise health data, support federated cancer research, and improve cancer care through open science and international data standards.</p>
+      <div class="actions"><a class="button" href="{% url 'admin:index' %}">Sign in to admin <span aria-hidden="true">↗</span></a><a class="text-link" href="{% url 'docs' %}">Read the guide <span aria-hidden="true">→</span></a></div>
+      <p class="hero-note">Manage the people, profiles, and research outputs published on the eHealth-Hub website.</p>
     </div>
-  </header>
-
-  <main class="main">
-
-    <section id="hero" class="hero section">
-      <div class="hero-bg">
-      </div>
-      <div class="container text-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1 data-aos="fade-up">Welcome to <span>eHealthHub</span></h1>
-          <p data-aos="fade-up" data-aos-delay="100">Empowering health solutions with ease and accessibility.<br></p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="/e_admin/" class="btn-get-started">Login</a>
-            <a href="/docs/" class="btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Read Docs</span></a>
-          </div>
-          <br><br>
-          <img src="{% static 'assets/img/eHealth.png' %}" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">eHealth Hub </strong><span>All Rights Reserved</span></p>
-      <div class="credits">Designed by <a href="#">eHealth Hub</a>
-      </div>
+    <div class="project-brand-panel">
+      <img src="{% static 'images/eHealthHub_logo.png' %}" alt="eHealth-Hub for Cancer" class="project-logo" width="720" height="720">
+      <div class="project-brand-caption"><span>All-island collaboration</span><span>Open science</span><span>Health data standards</span></div>
     </div>
-
-  </footer>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-
-  <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-
-</html>
+  </section>
+  <section class="partnership-strip" aria-label="Project leadership and funding"><div><span class="eyebrow">Jointly led by</span><p>University of Limerick<br>Queen’s University Belfast</p></div><div><span class="eyebrow">Supported through</span><p>North South Research Programme<br>Strand II</p></div><a class="text-link" href="https://www.ehealth4cancer.ie/about" target="_blank" rel="noopener noreferrer">About the partnership ↗</a></section>
+  <section class="capabilities" aria-labelledby="capabilities-title"><div class="section-heading"><p class="eyebrow">Website content management</p><h2 id="capabilities-title">Keep the research community connected.</h2></div><div class="feature-grid">
+    <a class="feature-card" href="{% url 'admin:ehealth_app_people_changelist' %}"><span class="card-number">01 / PEOPLE</span><h3>People &amp; expertise</h3><p>Manage names, titles, affiliations, and portraits. Build richer profiles with biographies and expertise.</p><span class="card-link">Manage people <span aria-hidden="true">↗</span></span></a>
+    <a class="feature-card" href="{% url 'admin:ehealth_app_peopleresearchlink_changelist' %}"><span class="card-number">02 / RESEARCH</span><h3>Research outputs</h3><p>Connect publications, posters, and presentations to their authors, with dates, venues, and direct links.</p><span class="card-link">Manage research outputs <span aria-hidden="true">↗</span></span></a>
+    <a class="feature-card" href="{% url 'docs' %}"><span class="card-number">03 / GUIDANCE</span><h3>Guidance &amp; documentation</h3><p>Follow the publishing workflow, understand your data, and find the API endpoints that power the site.</p><span class="card-link">Read documentation <span aria-hidden="true">↗</span></span></a>
+  </div></section>
+  <section class="getting-started"><div><p class="eyebrow">For content administrators</p><h2>Maintain a complete research profile.</h2><p>Create a person, add their background, then connect their research. The guide walks you through each step.</p></div><a class="button secondary" href="{% url 'docs' %}#getting-started">Follow the workflow <span aria-hidden="true">→</span></a></section>
+</main>
+{% endblock %}
