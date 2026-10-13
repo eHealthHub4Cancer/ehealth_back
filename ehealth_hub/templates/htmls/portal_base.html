@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The eHealth Hub workspace for managing people, research outputs, and public profile information.">
+  <title>{% block title %}eHealth Hub{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/portal.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="{% url 'home' %}" aria-label="eHealth-Hub for Cancer home"><img class="brand-logo" src="{% static 'images/eHealthHub_logo.png' %}" alt="eHealth-Hub for Cancer"><span>eHealth-Hub for Cancer<small>Research administration</small></span></a>
+    <nav aria-label="Main navigation">
+      <a href="{% url 'home' %}" {% block home_active %}{% endblock %}>Overview</a>
+      <a href="{% url 'docs' %}" {% block docs_active %}{% endblock %}>Documentation</a>
+      <a class="button small" href="{% url 'admin:index' %}">Open admin <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  {% block content %}{% endblock %}
+  <footer class="site-footer"><span>© {% now 'Y' %} eHealth Hub</span><span>An all-island partnership for cancer research.</span><a href="{% url 'docs' %}">Workspace guide ↗</a></footer>
+</body>
+</html>
