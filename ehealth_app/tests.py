@@ -162,3 +162,28 @@ class PeopleResearchLinkTests(TestCase):
         link = PeopleResearchLink.objects.create(people=self.person, title='Poster', url='https://example.org/poster')
         self.person.delete()
         self.assertFalse(PeopleResearchLink.objects.filter(pk=link.pk).exists())
+
+
+class PeopleImageUploadTests(TestCase):
+    def image_upload(self, size=0):
+        from PIL import Image
+        from django.core.files.uploadedfile import SimpleUploadedFile
+        from io import BytesIO
+        buffer = BytesIO()
+        Image.new('RGB', (16, 16), 'blue').save(buffer, format='PNG')
+        content = buffer.getvalue()
+        content += b'0' * max(0, size - len(content))
+        return SimpleUploadedFile('portrait.png', content, content_type='image/png')
+
+    def test_large_original_is_rejected_with_field_error(self):
+        from .forms import PeopleAdminForm
+        form = PeopleAdminForm(data={'full_name': 'Researcher', 'association': 'University'},
+                               files={'image': self.image_upload(5 * 1024 * 1024 + 1)})
+        self.assertFalse(form.is_valid())
+        self.assertIn('5 MB', str(form.errors['image']))
+
+    def test_small_portrait_is_accepted(self):
+        from .forms import PeopleAdminForm
+        form = PeopleAdminForm(data={'full_name': 'Researcher', 'association': 'University'},
+                               files={'image': self.image_upload()})
+        self.assertTrue(form.is_valid(), form.errors)

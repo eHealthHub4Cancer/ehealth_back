@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin as 
 from django.contrib.auth.models import User, Group
 from unfold.admin import ModelAdmin, StackedInline
 from unfold.forms import AdminPasswordChangeForm, UserChangeForm, UserCreationForm
+from .forms import PeopleAdminForm
 from .models import (
     Tag, People, PeopleInformation, 
     ResearchInterest, SocialPlatform, 
@@ -50,6 +51,11 @@ class PeopleSocialLinkInline(StackedInline):
 # People admin
 @admin.register(People)
 class PeopleAdmin(ModelAdmin):
+    form = PeopleAdminForm
+
+    class Media:
+        js = ('js/people-image.js',)
+
     inlines = [PeopleSocialLinkInline, PeopleResearchLinkInline]
     list_display = ('full_name', 'title', 'created_at')  # Display main fields
     search_fields = ('full_name',)  # Enable search for people's names
