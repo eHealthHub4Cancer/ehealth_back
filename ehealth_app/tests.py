@@ -187,3 +187,50 @@ class PeopleImageUploadTests(TestCase):
         form = PeopleAdminForm(data={'full_name': 'Researcher', 'association': 'University'},
                                files={'image': self.image_upload()})
         self.assertTrue(form.is_valid(), form.errors)
+
+
+@override_settings(STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage')
+class PeopleInformationInlineTests(TestCase):
+    def setUp(self):
+        self.client.force_login(User.objects.create_superuser('profile-admin', 'admin@example.org', 'test-password'))
+
+    def payload(self):
+        return {
+            'full_name': 'New Researcher', 'association': 'University', 'slug': 'new-researcher',
+            'peopleinformation_set-TOTAL_FORMS': '1', 'peopleinformation_set-INITIAL_FORMS': '0',
+            'peopleinformation_set-MIN_NUM_FORMS': '0', 'peopleinformation_set-MAX_NUM_FORMS': '1',
+            'peopleinformation_set-0-about_user': '', 'peopleinformation_set-0-institution': '',
+            'social_links-TOTAL_FORMS': '0', 'social_links-INITIAL_FORMS': '0',
+            'research_links-TOTAL_FORMS': '0', 'research_links-INITIAL_FORMS': '0',
+            '_continue': 'Save and continue editing',
+        }
+
+    def test_save_basic_person_then_complete_information_later(self):
+        response = self.client.post(reverse('admin:ehealth_app_people_add'), self.payload())
+        self.assertEqual(response.status_code, 302)
+        person = People.objects.get(slug='new-researcher')
+        self.assertFalse(PeopleInformation.objects.filter(people=person).exists())
+        data = self.payload()
+        data['peopleinformation_set-0-about_user'] = '<p>A cancer researcher.</p>'
+        data['peopleinformation_set-0-institution'] = 'University'
+        response = self.client.post(reverse('admin:ehealth_app_people_change', args=[person.pk]), data)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(PeopleInformation.objects.get(people=person).institution, 'University')
+        response = self.client.get(reverse('admin:ehealth_app_people_change', args=[person.pk]))
+        formset = response.context['inline_admin_formsets'][0].formset
+        self.assertEqual(len(formset.forms), 1)
+
+    def test_save_person_and_information_together(self):
+        from .models import ResearchInterest
+        interest = ResearchInterest.objects.create(name='Cancer genomics')
+        data = self.payload()
+        data.update({
+            'peopleinformation_set-0-about_user': '<p>A cancer researcher.</p>',
+            'peopleinformation_set-0-institution': 'University',
+            'peopleinformation_set-0-research_interests': [str(interest.pk)],
+        })
+        response = self.client.post(reverse('admin:ehealth_app_people_add'), data)
+        self.assertEqual(response.status_code, 302)
+        profile = PeopleInformation.objects.get(people__slug='new-researcher')
+        self.assertEqual(profile.about_user, '<p>A cancer researcher.</p>')
+        self.assertEqual(list(profile.research_interests.all()), [interest])
