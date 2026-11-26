@@ -48,6 +48,25 @@ class PeopleSocialLinkInline(StackedInline):
     extra = 0
 
 
+class PeopleInformationInline(StackedInline):
+    model = PeopleInformation
+    verbose_name = 'People information (optional — complete now or later)'
+    verbose_name_plural = 'People information'
+    extra = 1
+    max_num = 1
+    autocomplete_fields = [
+        'research_interests', 'areas_of_expertise', 'key_initiatives',
+        'key_research_areas', 'qualifications', 'memberships', 'role_badge',
+    ]
+    fieldsets = (
+        ('Biography and institution', {'fields': ('about_user', 'institution')}),
+        ('Research and expertise', {'fields': (
+            'research_interests', 'areas_of_expertise', 'key_research_areas', 'key_initiatives',
+        )}),
+        ('Qualifications and affiliations', {'fields': ('qualifications', 'memberships', 'role_badge')}),
+    )
+
+
 # People admin
 @admin.register(People)
 class PeopleAdmin(ModelAdmin):
@@ -56,7 +75,7 @@ class PeopleAdmin(ModelAdmin):
     class Media:
         js = ('js/people-image.js',)
 
-    inlines = [PeopleSocialLinkInline, PeopleResearchLinkInline]
+    inlines = [PeopleInformationInline, PeopleSocialLinkInline, PeopleResearchLinkInline]
     list_display = ('full_name', 'title', 'created_at')  # Display main fields
     search_fields = ('full_name',)  # Enable search for people's names
     autocomplete_fields = ['tags', 'title']  # Enable autocomplete for tags
